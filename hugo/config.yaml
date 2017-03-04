@@ -1,11 +1,28 @@
 ---
-baseurl: "https://fspoettel.github.io/blaupause/"
+# Site
+baseurl: "http://change-me.dev"
 title: "Blaupause"
-enableRobotsTXT: "true"
-googleAnalytics: "UA-XXXXXX"
+enableRobotsTXT: true
+googleAnalytics: ""
+# Content
 languageCode: "en-us"
-layoutdir: '../src/layouts'
+defaultContentLanguage: "en"
+enableMissingTranslationPlaceholders: false
+paginate: 10
+# Directories
+archetypeDir: "archetypes"
+contentDir: "content"
+dataDir: "data"
+layoutDir: '../src/layouts'
+# Formats
+defaultExtension: "html"
 metaDataFormat: "yaml"
+# Params
 params:
-  AuthorName: "Felix Spöttel"
+  blaupause:
+    useModernizr: false
+# DO NOT CHANGE BELOW THIS LINE
+# -----------------------------
+disableLiveReload: true
+watch: false
 ---

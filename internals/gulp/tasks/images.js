@@ -1,4 +1,3 @@
-
 const del = require('del');
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
@@ -6,7 +5,7 @@ const cfg = require('../config').images;
 
 /**
  * @name images:build
- * @task Builds the images via imagemin
+ * @task builds the images via imagemin
  */
 gulp.task('images:build', () =>
   gulp.src(cfg.sourcePath)
@@ -16,7 +15,7 @@ gulp.task('images:build', () =>
 
 /**
  * @name images:clean
- * @task Cleans the image build directory
+ * @task cleans the image build directory
  */
 gulp.task('images:clean', () =>
   del([`${cfg.destinationPath}/**`]));

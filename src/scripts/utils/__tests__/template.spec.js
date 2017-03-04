@@ -6,12 +6,12 @@ const isNodeList = (nodes) => {
   const stringRepr = Object.prototype.toString.call(nodes);
 
   return typeof nodes === 'object' &&
-    /^\[object (HTMLCollection|NodeList|Object)\]$/.test(stringRepr) &&
+    /^\[object (HTMLCollection|NodeList|Object)]$/.test(stringRepr) &&
     nodes.length !== undefined &&
     (nodes.length === 0 || isElement(nodes[0]));
 };
 
-test('htmlToElement() should output a node', t => {
+test('htmlToElement() should output a node', (t) => {
   const doc = document;
   const node = htmlToElement('<div class="foo">bar</div>');
   doc.body.appendChild(node);
@@ -21,14 +21,14 @@ test('htmlToElement() should output a node', t => {
   t.is(doc.querySelector('.foo').textContent, 'bar');
 });
 
-test('htmlToElements() should output a NodeList', t => {
+test('htmlToElements() should output a NodeList', (t) => {
   const doc = document;
   const nodes = htmlToElements('<div class="bar">bar</div><div class="bar">baz</div>');
   const nodeArray = [].slice.call(nodes);
 
   t.true(isNodeList(nodes));
 
-  nodeArray.forEach(node => {
+  nodeArray.forEach((node) => {
     doc.body.appendChild(node);
   });
 
