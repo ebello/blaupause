@@ -1,6 +1,6 @@
 ---
 # Site
-baseurl: "http://change-me.dev"
+baseurl: "https://fspoettel.github.io/blaupause/"
 title: "Blaupause"
 enableRobotsTXT: true
 googleAnalytics: ""
