@@ -47,7 +47,9 @@ const browserSync = {
     host,
     notify: false,
     port,
-    server: destinationPath,
+    server: {
+      baseDir: destinationPath,
+    },
   },
 };
 
@@ -66,7 +68,7 @@ const copy = {
     },
     {
       sourcePath: `${sourcePath}/*.*`,
-      destinationPath,
+      destinationPath: assetPath,
     },
   ],
 };
@@ -81,7 +83,7 @@ const hugo = {
   destinationPath,
   sourcePath: 'hugo',
   port,
-  watch: ['hugo/**', `${sourcePath}/layouts/**/*.html`],
+  watch: ['hugo/content/**', 'hugo/data/**', 'hugo/config.yaml', `${sourcePath}/layouts/**/*.html`]
 };
 
 /**

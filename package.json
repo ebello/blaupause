@@ -30,6 +30,7 @@
     "babel-preset-stage-1": "^6.22.0",
     "babel-register": "^6.23.0",
     "browser-sync": "^2.18.8",
+    "compression": "^1.6.2",
     "cssnano": "^3.10.0",
     "del": "^2.2.2",
     "eslint": "^3.16.1",
@@ -55,13 +56,12 @@
     "vinyl-named": "^1.1.0",
     "webpack": "^2.2.1",
     "webpack-stream": "^3.2.0",
-    "yargs": "^6.6.0"
+    "yargs": "^7.0.2"
   },
   "scripts": {
     "lint-scripts": "eslint src/scripts internals/gulp ./*.js",
     "lint-styles": "stylelint --syntax scss src/styles/**/*.scss",
     "lint": "npm run lint-styles; npm run lint-scripts",
-    "pretest": "npm run lint-styles; npm run lint-scripts",
     "test": "ava"
   },
   "ava": {
